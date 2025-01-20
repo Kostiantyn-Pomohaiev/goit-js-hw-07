@@ -1,11 +1,8 @@
-const len = document.querySelector('ul').children.length;
-console.log("Number of categories: " + len);
+const list = document.querySelector('#categories');
+console.log(`Number of categories: ${list.children.length}`);
 
-const arr = document.querySelectorAll('li.item');
-
-arr.forEach((item) => {
-    const cat = item.querySelector('h2')
-    const sum = item.querySelector("ul").children.length
-    console.log("Category: " + cat.textContent)
-    console.log("Elements: " + sum)
+const item = document.querySelectorAll('.item');
+item.forEach(element => {
+    console.log(`Category: ${element.firstElementChild.textContent}`);
+    console.log(`Elements: ${element.lastElementChild.children.length}`);
 })
